@@ -1,0 +1,96 @@
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_ttf.h>
+#include <SDL/SDL_mixer.h>
+#include <string.h>
+#include <time.h>
+#include <stdlib.h>
+#include "definicoes.h"
+
+extern int volume;
+extern SDL_Surface* screen;
+extern Uint32 cor_fundo;
+
+void newRecord()
+{
+	SDL_Surface* message;
+	TTF_Font *font;
+	SDL_Event event;
+	SDL_Rect temp;
+	int quit = 0;
+	Mix_Music* music;
+	
+	music = Mix_LoadMUS("teste.mp3");
+	if (!music)
+	{
+		printf("Nao consegui abrir arquivo musica.\n");
+  		exit(ERRO);
+	}
+	
+	
+	Mix_PlayMusic(music, -1);
+		
+	while(!quit)
+	{
+		while(SDL_PollEvent(&event)) 
+		{
+			switch(event.type)
+			{
+				case SDL_QUIT: quit = 1; break;
+				case SDL_KEYDOWN:
+					switch(event.key.keysym.sym)
+					{
+						case SDLK_ESCAPE: quit = 1; break;
+						case SDLK_RETURN: quit = 1; break;
+						case SDLK_a:
+							if(volume < (MIX_MAX_VOLUME/2) - 10)
+							{
+								volume += 10;
+							Mix_VolumeMusic(volume);
+							}
+							break;
+						case SDLK_d:
+							if (volume > 10)
+							{
+								volume -= 10;
+								Mix_VolumeMusic(volume);
+							}
+							break;
+						case SDLK_s:
+							if (volume == 0)
+							{
+								volume = MIX_MAX_VOLUME/2;
+								Mix_VolumeMusic(volume);
+							}
+							else
+							{
+								volume = 0;
+								Mix_VolumeMusic(volume);
+							}
+							break;
+						default: break;
+					}
+			}
+		}
+		
+		if (-1 == SDL_FillRect(screen, NULL, cor_fundo))
+		{
+			printf("Nao consegui encher o retangulo. SDL error=%s\n", SDL_GetError());
+			exit(ERRO);
+		}
+		
+		temp.x = 0;
+		temp.y = 0;
+		apply_surface(temp, background, screen);
+		
+		if (-1 == SDL_Flip(screen))
+		{
+			printf("Nao consegui fazer flip. SDL error=%s\n", SDL_GetError());
+			exit(ERRO);
+		}
+	}
+	SDL_FreeSurface(background);
+	Mix_FreeMusic(music);
+
+}
+

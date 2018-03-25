@@ -1,0 +1,103 @@
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_ttf.h>
+#include <SDL/SDL_mixer.h>
+#include <string.h>
+#include <time.h>
+#include <stdlib.h>
+
+#include "definicoes.h"
+
+void inputInit(STRING_INPUT *str)
+{
+	str->input = "";
+	str->text = NULL;
+	SDL_EnableUNICODE(SDL_ENABLE);
+}
+
+void inputQuit(STRING_INPUT *str)
+{
+	SDL_FreeSurface(str->text);
+	SDL_EnableUNICODE(SDL_DISABLE);
+}
+
+void handleInput (STRING_INPUT *str, SDL_Event event, TTF_Font* font)
+{
+	char *temp;
+	SDL_Color textColor = {255,255,255};
+	
+	temp = str->input;
+	//If a key was pressed
+	if( event.type == SDL_KEYDOWN )
+	{
+		if (strlen(str->input) <= 8)
+		{
+			//If the key is a space
+		    if( event.key.keysym.unicode == (Uint16)' ' )
+		    {
+		        //Append the character
+		        str->input += (char)event.key.keysym.unicode;    
+		    }
+		     //If the key is a number
+		    else if( ( event.key.keysym.unicode >= (Uint16)'0' ) && ( event.key.keysym.unicode <= (Uint16)'9' ) )
+		    {
+		        //Append the character
+		        str->input += (char)event.key.keysym.unicode;
+		    }
+		    //If the key is a uppercase letter
+		    else if( ( event.key.keysym.unicode >= (Uint16)'A' ) && ( event.key.keysym.unicode <= (Uint16)'Z' ) )
+		    {
+		        //Append the character
+		        str->input += (char)event.key.keysym.unicode;
+		    }
+		    //If the key is a lowercase letter
+		    else if( ( event.key.keysym.unicode >= (Uint16)'a' ) && ( event.key.keysym.unicode <= (Uint16)'z' ) )
+		    {
+		        //Append the character
+		        str->input += (char)event.key.keysym.unicode;
+		    }
+		}
+		//If backspace was pressed and the string isn't blank
+		if( ( event.key.keysym.sym == SDLK_BACKSPACE ) && ( str.length() != 0 ) )
+		{
+		    //Remove a character from the end
+		    str->input[strlen(str->input)] = "";
+		}
+		//If the string was changed
+		if( str->input != temp )
+		{
+		    //Free the old surface
+		    SDL_FreeSurface( str->text );
+		
+		    //Render a new text surface
+		    str->text = TTF_RenderText_Solid( font, str.c_str(), textColor );
+		}
+	}
+}
+
+void show_name(STRING_INPUT str)
+{
+	SDL_Rect temp;
+	
+	if( str.text != NULL)
+	{
+		//Show the name
+		temp.x = 400;
+		temp.y = 300;
+        	apply_surface( temp, text, screen);
+      	}
+}
+
+void newRecord();
+{
+	STRING_INPUT str;
+	TTF_Font *font;
+	SDL_
+	
+	
+	
+	
+}
+
+
+

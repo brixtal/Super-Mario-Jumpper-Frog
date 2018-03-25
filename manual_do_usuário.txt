@@ -1,0 +1,146 @@
+----------------------------------------------------
+----------------------------------------------------
+--             MARIO FROG - VERSÃO 1.O            --
+--               MANUAL DO JOGADOR                --
+----------------------------------------------------
+----------------------------------------------------
+
+----------------------------------------------------
+----------------------------------------------------
+
+INDICE
+
+1- SOBRE O JOGO
+2- ABRINDO O JOGO
+  2.1 - WINDOWS
+  2.2 - LINUX
+  2.3 - OUTROS SISTEMAS OPERACIONAIS
+3- MENU
+  3.1 - INICIAR
+  3.2 - OPÇÕES
+  3.3 - RECORDES
+  3.4 - SAIR
+4 - COMO JOGAR
+  4.1 - CONHECENDO O JOGO
+  4.2 - JOGANDO
+  4.3 - GAME OVER
+5 - COMANDOS
+6 - COPYRIGHTS DO JOGO
+7 - SOBRE O DESENVOLVIMENTO DO JOGO
+
+----------------------------------------------------
+----------------------------------------------------
+
+1 - SOBRE O JOGO
+O jogo mundialmente conhecido Frogger está de volta
+nesta versão especial em homenagem ao jogo Super 
+Mario Word. Como no jogo original, seu objetivo é 
+chegar nos tubos, que estão do outro lado do rio, 
+mas para isso você deverá atravessar uma perigosa 
+estrada movimentada e ainda atravesar o rio sem cair 
+na água. Muito cuidado para não ser atropelado ou 
+cair na água, senão você perderá uma vida!
+
+
+2 - ABRINDO O JOGO
+2.1 - WINDOWS
+No CD do jogo, há uma pasta WINDOWS. Abra e clique
+duas vezes sobre o executável frog.exe. Você será
+levado até o menu principal do jogo.
+
+2.2 - LINUX
+No CD do jogo, há uma pasta LINUX. Abra e clique
+duas vezes sobre o executável frog. Você será
+levado até o menu principal do jogo.
+
+2.3 - OUTROS SISTEMAS OPERACIONAIS
+O Mario Frog não foi desenvolvido para outros 
+sistemas operacionais, mas isso não impede que ele
+funcione neles. Para isso será necessário que haja
+uma nova compilação para esse outro SO. Você 
+encontra a fonte deste jogo na pasta DEV, além de
+um manual do desenvolvedor que lhe ajudará na
+tarefa de compilação.
+
+3 - MENU
+
+3.1 - INICIAR
+Inicia um novo jogo.
+
+3.2 - OPÇÕES
+Mostra algumas instruções de jogabilidade e de 
+configuração de som
+
+3.3 - RECORDES
+Veja a lista dos melhores jogadores e suas 
+pontuações.
+
+3.4 - SAIR
+Fecha o jogo.
+
+4 - COMO JOGAR
+4.1 - CONHECENDO O JOGO
+Pressione INICIAR no menu principal, um novo jogo 
+será aberto. Note que a direita do sapo há o 
+número de vidas restantes e a sua pontuação; e à 
+direta o nível e o tempo, que é regressivo no 
+nível 1 e progressivo nos demais níveis. Não deixe
+nem o tempo nem as vidas chegarem a zero, senão o 
+jogo acaba.
+
+Seu objetivo é levar o sapo até os dois tubos que 
+estão do outro lado do rio. Para isso será 
+necessário atravessar as quatro faixas da 
+movimentada estrada e ainda atravessar o rio sem 
+cair na água. Cuidado, se você for atropelado ou 
+cair na água você perderá uma vida!
+
+4.2 - JOGANDO
+Para que você siga em frente, basta apertar a 
+tecla CIMA do teclado. As teclas DIREITA, 
+ESQUERDA e BAIXO também movimentam o Mario para 
+a direta, esquerda e para baixo, respectivamente. 
+
+Cada vez que você chega nas duas casas, você 
+passará de nível. Cuidado! Você não pode chegar 
+na mesma casa duas vezes num mesmo nível!
+
+4.3 - GAME OVER
+A tela de GAME OVER aparecerá toda vez que o seu 
+número de vidas chegar a zero ou o tempo para a 
+conclusão daquele nível terminar.
+
+No GAME OVER você tem duas opções: Restart, para 
+iniciar um novo jogo; e Exit, para sair do jogo.
+
+5 - COMANDOS
+CIMA - O Mario anda para a frente.
+BAIXO - O Mario anda para trás.
+ESQUERDA - O Mario anda para a esquerda.
+DIREITA - O Mario anda para  a direita.
+ESQ - Sair do jogo / tela do menu.
+A - Aumenta o volume.
+D - Diminui o volume.
+S - Sem som.
+
+6 - COPYRIGHTS DO JOGO
+
+Este jogo é OpenSource. Para editá-lo, entre na pasta
+DEV e leia o manual 'man_dev.txt'. Para se fazer uma 
+boa edição é recomendado conhecimento intermediário 
+na liguagem de programação C e conhecimento de 
+funções básicas da bibliteca gráfica SDL 
+(http://www.libsdl.org).
+
+Mario e seus personagens são © 1990-1991 NINTENDO CO.
+e estão sendo utilizados aqui de acordo com todas as 
+leis de direitos autorais.
+
+7 - SOBRE O DESENVOLVIMENTO DO JOGO
+O Mario Frog foi desenvolvido como projeto final de 
+curso de Computação 1 (equivalente à Programação 1)
+por alunos de Ciência da Computação da Universidade 
+Federal do Rio de Janeiro com o objetivo de aprofundar 
+um pouco mais o conhecimento na liguagem de programação 
+C e conhecer a biblioteca gráfica SDL e suas funções.
+         

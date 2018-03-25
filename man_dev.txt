@@ -1,0 +1,61 @@
+----------------------------------------------------
+----------------------------------------------------
+--             MARIO FROG - VERSÃO 1.O            --
+--             MANUAL DO DESENVOLVEDOR            --
+----------------------------------------------------
+----------------------------------------------------
+
+----------------------------------------------------
+----------------------------------------------------
+
+INDICE
+
+1- SOBRE O DESENVOLVIMENTO
+2- PARA COMPILAR 
+  2.1 - COM O GCC NO WINDOWS
+  2.2 - COM O GCC NO LINUX
+3- O JOGO
+
+
+----------------------------------------------------
+----------------------------------------------------
+
+1 - SOBRE O DESENVOLVIMENTO
+Este jogo foi desenvolvido utilizando a biblioteca
+gráfica SDL (http://www.libsdl.org). Para editar 
+este jogo no Windows é necessário que o SDL esteja 
+instalada. Para isso, entre no site e faça o 
+download da vesão mais recente do SDL e de suas 
+extenções SDL_image, SDL_mixer e SDL_ttf. Lembrando
+da que é necessário que haja um compilador já 
+instalado na máquina. Recomendamos o MinGW
+(http://www.mingw.org).
+
+No Linux deve-se entrar no download de pacotes e 
+efetur o download das bibliotecas SDL por lá. Se a
+sua vesão do Linux não tem essa função, entre no
+site http://www.libsdl.org e faça o download. É 
+necessário que sejam instaladas todas as bibliotecas
+principalmente a image, mixer e ttf, além do próprio
+SDL.
+
+2 - PARA COMPILAR
+2.1 - COM O GCC NO WINDOWS
+gcc main.c estagio1.c estagio2.c menu.c instrucoes.c 
+funcoes.c timer.c -o main.exe -lmingw32 -lSDLmain 
+-lSDL -lSDL_image -lSDL_ttf -lSDL_mixer
+
+2.2 - COM GCC NO LINUX
+gcc main.c estagio1.c estagio2.c menu.c instrucoes.c
+ funcoes.c timer.c -o main.exe -lSDLmain -lSDL 
+-lSDL_image -lSDL_ttf -lSDL_mixer
+
+3 - O JOGO
+O jogo foi desenvolvido primeiramente para ter 
+apenas dois níveis de dificuldade. Este níveis estão
+em estagio1.c e estagio2.c. As funções, tais como
+CheckColision, init. O menu foi desenvolvido no 
+menu.c e todas as definições foram colocadas no
+definicoes.h.
+
+
